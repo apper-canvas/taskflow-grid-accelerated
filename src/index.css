@@ -40,7 +40,7 @@
   }
   
   .priority-low {
-    @apply bg-gradient-to-r from-info to-success text-white;
+    @apply bg-gradient-to-r from-secondary-500 to-primary-500 text-white;
   }
   
   .priority-medium {
@@ -48,7 +48,7 @@
   }
   
   .priority-high {
-    @apply bg-gradient-to-r from-accent-500 to-danger text-white;
+    @apply bg-gradient-to-r from-accent-600 to-danger text-white;
   }
 }
 
@@ -98,7 +98,7 @@
   position: fixed;
   width: 10px;
   height: 10px;
-  background: #6366f1;
+  background: #10b981;
   animation: confetti-fall 3s linear infinite;
   z-index: 1000;
 }
