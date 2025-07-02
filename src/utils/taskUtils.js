@@ -25,9 +25,10 @@ export const filterTasks = (tasks, filters) => {
 export const sortTasks = (tasks, sortBy = 'created') => {
   return [...tasks].sort((a, b) => {
     switch (sortBy) {
-      case 'priority':
+      case 'priority': {
         const priorityOrder = { high: 3, medium: 2, low: 1 };
         return priorityOrder[b.priority] - priorityOrder[a.priority];
+      }
       
       case 'dueDate':
         if (!a.dueDate && !b.dueDate) return 0;
