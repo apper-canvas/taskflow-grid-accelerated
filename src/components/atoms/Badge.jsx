@@ -15,7 +15,7 @@ const Badge = ({
     accent: 'gradient-accent text-white',
     success: 'bg-success text-white',
     warning: 'bg-warning text-white',
-    danger: 'bg-danger text-white',
+danger: 'bg-danger text-white',
     'priority-low': 'priority-low',
     'priority-medium': 'priority-medium',
     'priority-high': 'priority-high'

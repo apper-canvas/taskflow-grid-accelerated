@@ -10,7 +10,7 @@ const StatCard = ({
   trend,
   className = ''
 }) => {
-  const colorClasses = {
+const colorClasses = {
     primary: 'from-primary-500 to-secondary-500',
     secondary: 'from-secondary-500 to-accent-500',
     accent: 'from-accent-500 to-primary-500',

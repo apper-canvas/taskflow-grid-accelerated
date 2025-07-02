@@ -56,11 +56,11 @@ export const groupTasksByStatus = (tasks) => {
 export const getPriorityColor = (priority) => {
   switch (priority) {
     case 'high':
-      return 'bg-gradient-to-r from-accent-500 to-danger text-white';
+      return 'bg-gradient-to-r from-primary-600 to-accent-500 text-white';
     case 'medium':
-      return 'bg-gradient-to-r from-warning to-accent-500 text-white';
+      return 'bg-gradient-to-r from-warning to-primary-500 text-white';
     case 'low':
-      return 'bg-gradient-to-r from-info to-success text-white';
+      return 'bg-gradient-to-r from-info to-secondary-500 text-white';
     default:
       return 'bg-gray-100 text-gray-600';
   }

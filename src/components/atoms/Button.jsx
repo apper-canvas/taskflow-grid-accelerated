@@ -16,7 +16,7 @@ const Button = ({
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 transform focus:outline-none focus:ring-2 focus:ring-offset-2';
   
-  const variants = {
+const variants = {
     primary: 'gradient-primary text-white shadow-md hover:shadow-lg focus:ring-primary-500',
     secondary: 'bg-surface border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 focus:ring-gray-500',
     accent: 'gradient-accent text-white shadow-md hover:shadow-lg focus:ring-accent-500',

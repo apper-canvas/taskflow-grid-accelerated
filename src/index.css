@@ -22,7 +22,6 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
   }
-  
   .card-hover {
     @apply transform transition-all duration-200 ease-out hover:scale-102 hover:shadow-hover;
   }
@@ -39,16 +38,16 @@
     @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
   }
   
-  .priority-low {
-    @apply bg-gradient-to-r from-secondary-500 to-primary-500 text-white;
+.priority-low {
+    @apply bg-gradient-to-r from-info to-secondary-500 text-white;
   }
   
   .priority-medium {
-    @apply bg-gradient-to-r from-warning to-accent-500 text-white;
+    @apply bg-gradient-to-r from-warning to-primary-500 text-white;
   }
   
   .priority-high {
-    @apply bg-gradient-to-r from-accent-600 to-danger text-white;
+    @apply bg-gradient-to-r from-primary-600 to-accent-500 text-white;
   }
 }
 
