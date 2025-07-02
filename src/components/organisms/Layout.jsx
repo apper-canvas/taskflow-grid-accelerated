@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import ApperIcon from '@/components/ApperIcon';
-import Button from '@/components/atoms/Button';
+import React, { useContext, useState } from "react";
+import { motion } from "framer-motion";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
+import { AuthContext } from "@/contexts/AuthContext";
 
 const Layout = ({ children }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,13 +53,13 @@ const Layout = ({ children }) => {
               </div>
               <div>
                 <h1 className="text-xl font-bold gradient-text">TaskFlow</h1>
-                <p className="text-xs text-gray-500">Streamlined Tasks</p>
+                <p className="text-xs text-gray-500">Manage with ease</p>
               </div>
             </div>
           </div>
 
           {/* Navigation */}
-          <nav className="flex-1 px-4 pb-8">
+          <nav className="flex-1 px-4">
             <div className="space-y-2">
               {navigationItems.map((item) => (
                 <a
@@ -91,6 +92,11 @@ const Layout = ({ children }) => {
                 <div className="gradient-primary h-2 rounded-full" style={{ width: '75%' }} />
               </div>
             </div>
+          </div>
+
+          {/* Logout Button */}
+          <div className="mt-auto p-6 border-t border-gray-200">
+            <LogoutButton />
           </div>
         </div>
       </div>
@@ -201,6 +207,23 @@ const Layout = ({ children }) => {
         </main>
       </div>
     </div>
+  );
+};
+
+// Logout Button Component
+const LogoutButton = () => {
+  const { logout } = useContext(AuthContext);
+  
+  return (
+    <Button
+      variant="ghost"
+      size="sm"
+      icon="LogOut"
+      onClick={logout}
+      className="w-full text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+    >
+      Logout
+    </Button>
   );
 };
 

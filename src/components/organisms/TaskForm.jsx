@@ -13,7 +13,7 @@ const TaskForm = ({
   onCancel,
   className = ''
 }) => {
-  const { categories } = useCategories();
+const { categories } = useCategories();
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -27,7 +27,7 @@ const TaskForm = ({
   useEffect(() => {
     if (task) {
       setFormData({
-        title: task.title || '',
+        title: task.title || task.Name || '',
         description: task.description || '',
         dueDate: task.dueDate ? formatDateInput(task.dueDate) : '',
         priority: task.priority || 'medium',
@@ -103,9 +103,9 @@ const TaskForm = ({
     { value: 'high', label: 'High Priority' }
   ];
 
-  const categoryOptions = categories.map(cat => ({
-    value: cat.name,
-    label: cat.name
+const categoryOptions = categories.map(cat => ({
+    value: cat.name || cat.Name,
+    label: cat.name || cat.Name
   }));
 
   return (

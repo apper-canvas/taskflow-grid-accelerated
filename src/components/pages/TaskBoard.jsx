@@ -46,7 +46,7 @@ const TaskBoard = () => {
 
   const handleUpdateTask = async (taskData) => {
     if (editingTask) {
-      await updateTask(editingTask.Id, taskData);
+await updateTask(editingTask.Id, taskData);
       setEditingTask(null);
       setShowTaskForm(false);
     }
